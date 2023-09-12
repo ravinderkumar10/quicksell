@@ -1,0 +1,19 @@
+.group-title {
+  display: flex;
+  align-items: center;
+  /* ... other styles ... */
+}
+
+.progress-count {
+  display: flex;
+  align-items: center; /* This will align the progress and number vertically centered to each other */
+  gap: 5px; /* Gap between progress and number */
+}
+
+.progress {
+  /* ... Your styles for the progress here ... */
+}
+
+.count {
+  /* ... Your styles for the number here ... */
+}
