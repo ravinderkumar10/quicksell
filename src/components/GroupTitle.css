@@ -1,19 +1,34 @@
 .group-title {
+  margin: 5px 15px 15px 15px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  font-size: small;
   /* ... other styles ... */
 }
-
+.group-title > div {
+  flex: 0 0 20%;  /* If there are 5 direct child divs, each takes up 20% of the width. Adjust as needed. */
+}
 .progress-count {
   display: flex;
-  align-items: center; /* This will align the progress and number vertically centered to each other */
-  gap: 5px; /* Gap between progress and number */
+  align-items: center; 
+  /* This will align the progress and number vertically centered to each other */
+  gap: 25px; /* Gap between progress and number */
 }
 
-.progress {
-  /* ... Your styles for the progress here ... */
+.icon-buttons{
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  padding-left: 100px; 
+  color : grey;
+  font-size: large;
 }
+/* .title{
+  white-space: nowrap;
+} */
 
-.count {
-  /* ... Your styles for the number here ... */
+.title {
+  white-space: nowrap;
+  overflow: hidden;    /* In case the content inside the title is too long */
+  text-overflow: ellipsis; /* If the content is too long, it'll end with '...' */
 }

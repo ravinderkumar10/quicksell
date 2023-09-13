@@ -28,11 +28,17 @@ function Ticket({ ticket }) {
       <p className="ticket-title">
         <strong>{title}</strong>
       </p>
+      <div className="tags-container">
+      <p className="dots">...</p>
       {tag && (
-        <p className="ticket-tags">
+        
+        <p className="ticket-tags"> 
           {tag.map((tag, index) => (index === 0 ? tag : `, ${tag}`))}
         </p>
       )}
+
+      </div>
+      
     </div>
   );
 }

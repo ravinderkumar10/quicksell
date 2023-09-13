@@ -37,5 +37,37 @@
 
 .ticket-tags {
   margin-top: 5px;
-  /* border: 1px solid #ccc; */
+  margin-left: 4px;
+  background-color: white;
+  color: gray;
+  border-color: white;
+  
+}
+.dots{
+  background-color: white;
+  color: gray;
+  border-color: white;
+}
+
+
+.tags-container {
+  display: flex;
+  align-items: center;  /* This will vertically align the items if they have different heights */
+  gap: 10px;  
+  /* Optional: To add some space between the button and the text */
+  display: inline;
+  
+}
+
+
+.ticket-tags{
+  display: inline;
+    border: 0.5px solid #eceef1; 
+    border-radius: 5px; 
+}
+
+.dots{
+  display: inline;
+  border: 0.5px solid #eceef1; 
+  border-radius: 5px; 
 }

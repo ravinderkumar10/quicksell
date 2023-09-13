@@ -25,10 +25,12 @@ function App() {
       });
   }, []); // The empty dependency array ensures that this effect runs once when the component mounts
 
-  console.log(tickets);
+// console.log(tickets);
+ //console.log(users);
   return (
     <div className="App">
       <NavBar setGroupingOption={setGroupingOption} />
+      {console.log(groupingOption)}
       <Board tickets={tickets} groupingOption={groupingOption} users={users} />
     </div>
   );

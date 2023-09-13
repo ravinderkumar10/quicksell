@@ -4,14 +4,32 @@ import "./Board.css";
 import GroupTitle from "./GroupTitle";
 
 function Board({ tickets, groupingOption, users }) {
-  // Extract unique status values
   const uniqueGroup = [
     ...new Set(tickets.map((ticket) => ticket[groupingOption])),
   ];
+  uniqueGroup.push("Done")
+  uniqueGroup.push("Incomplete")
+  console.log(uniqueGroup)
 
   function findNameById(userId) {
     const user = users.find((user) => user.id === userId);
     return user ? user.name : "User not found"; // Return the name or a message if not found
+  }
+
+  function findNameByPriority(priority)
+  {
+    switch (priority) {
+      case 4:
+        return "High";
+      case 3:
+        return "Medium";
+      case 2:
+        return "Low";
+      case 1:
+        return "Urgent";
+      default:
+        return "No priority";
+    }
   }
 
   return (
@@ -19,8 +37,8 @@ function Board({ tickets, groupingOption, users }) {
       <div className="status-bar">
         {uniqueGroup.map((group) => (
           <div key={group} className="status-group">
-            <GroupTitle
-              title={group === "userId" ? findNameById("userId") : group}
+          <GroupTitle
+              title={groupingOption === "userId" ? findNameById(group) : groupingOption === "priority" ? findNameByPriority(group) : group}
               ticketCount={
                 tickets.filter((ticket) => ticket[groupingOption] === group)
                   .length

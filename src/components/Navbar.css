@@ -1,8 +1,56 @@
 /* NavBar.css */
-
 .navbar {
   background-color: white; /* Change the background color to white */
   padding: 10px;
+} 
+
+/* Navbar.css */
+.navbar {
+  padding: 10px;
+  background-color: white;
+  color: white;
+  display: flex;
+  justify-content: start;
+  position: relative; /* This is important for the dropdown positioning context */
 }
 
-/* Existing styles for the navbar content go here */
+.navbar button {
+  margin: 0 10px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Position it right below the Display button */
+  left: 0;
+  border: 1px solid #ddd;
+  background-color: white;
+  z-index: 100; /* Ensure it appears on top of other content */
+  width: 200px; /* Adjust width as per your needs */
+}
+
+.dropdown button {
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown button:hover {
+  background-color: #f5f5f5;
+}
+
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px; /* Adjust padding as needed */
+  gap: 10px; /* Space between label and button */
+}
+
+.dropdown-label {
+  font-weight: bold;
+  color: #555;
+}
